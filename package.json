@@ -1,7 +1,7 @@
 {
 	"name": "swf-build",
 	"version": "1.0.1",
-	"description": "NodeJS ActionScript builder",
+	"description": "ActionScript Builder in NodeJS",
 	"main": "index.js",
 	"scripts": {
 		"test": "mocha test"
