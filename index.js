@@ -1,5 +1,6 @@
 var flexSdk = require('flex-sdk');
 var path = require('path');
+var fs = require('fs');
 
 var utils = {
 	extend:function(destObj) {
@@ -44,6 +45,8 @@ module.exports = function(input, output, params, callback) {
 	var defaults = {
 		output:path.resolve((typeof output==='string' ? output : path.dirname(input)+'/'+path.basename(input,'.as')+'.swf'))
 	};
+
+	if (!fs.existsSync(path.dirname(input))) fs.mkdirSync(path.dirname(input));
 
 	require('child_process').exec([
 		flexSdk.bin.mxmlc,
