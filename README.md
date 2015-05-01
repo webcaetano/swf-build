@@ -42,6 +42,8 @@ swfBuild('./test/main.as','./test/swf/main.swf',{
 }); 
 ```
 
+[![NPM](https://nodei.co/npm/swf-build.png)](https://nodei.co/npm/swf-build/)
+
 ---------------------------------
 
 The MIT [License](https://raw.githubusercontent.com/webcaetano/swf-build/master/LICENSE.md)
