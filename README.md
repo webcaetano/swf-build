@@ -11,6 +11,8 @@ npm install swf-build
 
 Simple Build
 ```javascript
+var swfBuild = require('swf-build');
+
 swfBuild('./test/main.as',function(err, stdout, stderr){
 	// output './test/main.swf'
 }); 
