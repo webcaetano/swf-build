@@ -11,33 +11,33 @@ npm install swf-build
 
 Simple Build
 ```javascript
-	swfBuild('./test/main.as',function(err, stdout, stderr){
-		// output './test/main.swf'
-	}); 
+swfBuild('./test/main.as',function(err, stdout, stderr){
+	// output './test/main.swf'
+}); 
 ```
 
 
 Set output
 ```javascript
-	swfBuild('./test/main.as','./test/swf/main.swf',function(err, stdout, stderr){
-		// output './test/swf/main.swf'
-	}); 
+swfBuild('./test/main.as','./test/swf/main.swf',function(err, stdout, stderr){
+	// output './test/swf/main.swf'
+}); 
 ```
 
 Set parameters
 ```javascript
-	swfBuild('./test/main.as','./test/swf/main.swf',{
-		'library-path': [
-			'./test/libs'
-		],
-		'source-path': [
-			'./test/zClass'
-		],
-		'swf-version': 13,
-		'use-gpu': true
-	},function(err, stdout, stderr){
-		// output './test/swf/main.swf'
-	}); 
+swfBuild('./test/main.as','./test/swf/main.swf',{
+	'library-path': [
+		'./test/libs'
+	],
+	'source-path': [
+		'./test/zClass'
+	],
+	'swf-version': 13,
+	'use-gpu': true
+},function(err, stdout, stderr){
+	// output './test/swf/main.swf'
+}); 
 ```
 
 ---------------------------------
