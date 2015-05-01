@@ -31,13 +31,8 @@ var objParam = function(base, attr) {
 	return resp.join(' -');
 }
 
-var defaultSwfPath = function(input){
-	var inputPath = path.parse(input);
-	return path.resolve(path.format(utils.extend({}, inputPath, {ext:'.swf',base:inputPath.name+'.swf'})));
-}
-
 module.exports = function(input, output, params, callback) {
-	if(!input || !path.parse(input).ext || path.parse(input).ext!='.as'){
+	if(!input || !path.extname(input) || path.extname(input)!='.as'){
 		console.log('Invalid input file.');
 		return;
 	}
@@ -47,7 +42,7 @@ module.exports = function(input, output, params, callback) {
 	if(typeof output === 'object') params = output;
 
 	var defaults = {
-		output:(typeof output==='string' ? path.resolve(output) : defaultSwfPath(input))
+		output:path.resolve((typeof output==='string' ? output : path.dirname(input)+'/'+path.basename(input,'.as')+'.swf'))
 	};
 
 	require('child_process').exec([
