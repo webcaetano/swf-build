@@ -1,0 +1,40 @@
+{
+	"name": "swf-build",
+	"version": "1.0.0",
+	"description": "NodeJS ActionScript builder",
+	"main": "index.js",
+	"scripts": {
+		"test": "mocha test"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:webcaetano/swf-build.git"
+	},
+	"keywords": [
+		"swf",
+		"actionscript",
+		"as2",
+		"as3",
+		"as",
+		"flash",
+		"builder",
+		"build",
+		"flash",
+		"builder",
+		"compiler",
+		"flex"
+	],
+	"author": "Andre Caetano",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/webcaetano/swf-build/issues"
+	},
+	"homepage": "https://github.com/webcaetano/swf-build",
+	"dependencies": {
+		"flex-sdk": "^4.6.0-0"
+	},
+	"devDependencies": {
+		"chai": "^2.3.0",
+		"mocha": "^2.2.4"
+	}
+}
