@@ -46,8 +46,6 @@ module.exports = function(input, output, params, callback) {
 		output:path.resolve((typeof output==='string' ? output : path.dirname(input)+'/'+path.basename(input,'.as')+'.swf'))
 	};
 
-	if (!fs.existsSync(path.dirname(input))) fs.mkdirSync(path.dirname(input));
-
 	require('child_process').exec([
 		flexSdk.bin.mxmlc,
 		getFlexParams(utils.extend({}, defaults, (typeof params==='object' ? params : {}))),
