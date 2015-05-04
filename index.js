@@ -6,9 +6,6 @@ var utils = {
 	extend:function(destObj) {
 		for (var i = 1; i < arguments.length; i++) for (var key in arguments[i]) destObj[key] = arguments[i][key];
 		return destObj;
-	},
-	isArray:function($){
-		return Object.prototype.toString.call($) === '[object Array]';
 	}
 };
 
@@ -22,7 +19,7 @@ var objParam = function(base, attr) {
 	var toSum = ({ 'source-path':true, 'library-path':true }[base] ? '+' : '');
 	var resp = [];
 
-	if(utils.isArray(attr)) {
+	if(Array.isArray(attr)) {
 		for(var i in attr) resp.push(base+toSum+'="'+attr[i]+'"');
 	} else {
 		for (var i in attr) {
