@@ -1,6 +1,6 @@
 {
 	"name": "swf-build",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "ActionScript Builder in NodeJS",
 	"main": "index.js",
 	"scripts": {
